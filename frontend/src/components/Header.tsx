@@ -1,4 +1,4 @@
-import NotificationCenter from "./NotificationCenter";
+﻿import NotificationCenter from "./NotificationCenter";
 import { Search } from 'lucide-react';
 
 export default function Header() {
@@ -8,7 +8,7 @@ export default function Header() {
         <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
         <input 
           type="text" 
-          placeholder="Búsqueda rápida (Ctrl + K)"
+          placeholder="BÃºsqueda rÃ¡pida (Ctrl + K)"
           className="w-full pl-10 pr-4 py-2 bg-slate-50 border-none rounded-xl text-sm focus:ring-2 focus:ring-blue-500/20 outline-none transition-all"
         />
       </div>
@@ -27,3 +27,4 @@ export default function Header() {
     </header>
   );
 }
+

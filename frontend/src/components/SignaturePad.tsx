@@ -1,9 +1,9 @@
-"use client";
+﻿"use client";
 
 import React, { useRef, useState, useEffect } from 'react';
 
 interface SignaturePadProps {
-  onSave: (signatureBase64: str, latitude: number, longitude: number) => void;
+  onSave: (signatureBase64: string, latitude: number, longitude: number) => void;
 }
 
 export default function SignaturePad({ onSave }: SignaturePadProps) {
@@ -12,7 +12,7 @@ export default function SignaturePad({ onSave }: SignaturePadProps) {
   const [location, setLocation] = useState<{ lat: number; lng: number } | null>(null);
 
   useEffect(() => {
-    // Obtener ubicación automáticamente al cargar
+    // Obtener ubicaciÃ³n automÃ¡ticamente al cargar
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition((pos) => {
         setLocation({ lat: pos.coords.latitude, lng: pos.coords.longitude });
@@ -56,7 +56,7 @@ export default function SignaturePad({ onSave }: SignaturePadProps) {
 
   const handleSave = () => {
     if (!canvasRef.current || !location) {
-      alert("Falta firma o ubicación");
+      alert("Falta firma o ubicaciÃ³n");
       return;
     }
     const signatureBase64 = canvasRef.current.toDataURL("image/png");
@@ -73,7 +73,7 @@ export default function SignaturePad({ onSave }: SignaturePadProps) {
 
   return (
     <div className="flex flex-col gap-4 p-4 border rounded-xl bg-white shadow-sm">
-      <h3 className="text-lg font-semibold text-slate-800">Firma de Recepción</h3>
+      <h3 className="text-lg font-semibold text-slate-800">Firma de RecepciÃ³n</h3>
       <canvas
         ref={canvasRef}
         onMouseDown={startDrawing}
@@ -98,14 +98,15 @@ export default function SignaturePad({ onSave }: SignaturePadProps) {
           disabled={!location}
           className="px-6 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 disabled:bg-slate-300 transition-all shadow-md active:scale-95"
         >
-          {location ? "Confirmar Entrega" : "Obteniendo ubicación..."}
+          {location ? "Confirmar Entrega" : "Obteniendo ubicaciÃ³n..."}
         </button>
       </div>
       {location && (
         <p className="text-[10px] text-slate-400">
-          Ubicación capturada: {location.lat.toFixed(4)}, {location.lng.toFixed(4)}
+          UbicaciÃ³n capturada: {location.lat.toFixed(4)}, {location.lng.toFixed(4)}
         </p>
       )}
     </div>
   );
 }
+

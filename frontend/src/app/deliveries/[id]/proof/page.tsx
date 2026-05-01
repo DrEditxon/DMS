@@ -10,7 +10,7 @@ export default function ProofPage() {
   const [receiverName, setReceiverName] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (signature: str, lat: number, lng: number) => {
+  const handleSubmit = async (signature: string, lat: number, lng: number) => {
     if (!receiverName) {
       alert("Por favor ingresa el nombre de quien recibe");
       return;

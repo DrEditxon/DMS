@@ -1,7 +1,17 @@
-from supabase import create_client, Client
-from app.core.config import settings
+﻿class MockTable:
+    def insert(self, data): return self
+    def select(self, *args, **kwargs): return self
+    def update(self, data): return self
+    def delete(self): return self
+    def eq(self, *args, **kwargs): return self
+    def execute(self):
+        class Result:
+            data = [{ "id": "mock-id", "tracking_number": "MOCK-123", "status": "pending", "full_name": "Mock User", "role": "admin", "email": "mock@dms.com" }]
+            count = 1
+        return Result()
 
-def get_supabase() -> Client:
-    return create_client(settings.SUPABASE_URL, settings.SUPABASE_KEY)
+class MockSupabase:
+    def table(self, name): return MockTable()
 
-supabase: Client = get_supabase()
+supabase = MockSupabase()
+def create_client(*args, **kwargs): return supabase

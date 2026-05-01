@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useQuery } from '@tanstack/react-query';
 import api from '@/lib/api';
@@ -22,7 +22,7 @@ export default function DashboardPage() {
 
   const cards = [
     { label: 'Entregas Totales', value: stats?.total || 0, icon: Package, color: 'text-blue-600', bg: 'bg-blue-50' },
-    { label: 'En Tránsito', value: stats?.in_progress || 0, icon: Clock, color: 'text-amber-600', bg: 'bg-amber-50' },
+    { label: 'En TrÃ¡nsito', value: stats?.in_progress || 0, icon: Clock, color: 'text-amber-600', bg: 'bg-amber-50' },
     { label: 'Completadas', value: stats?.completed || 0, icon: CheckCircle2, color: 'text-emerald-600', bg: 'bg-emerald-50' },
     { label: 'Pendientes', value: stats?.pending || 0, icon: TrendingUp, color: 'text-purple-600', bg: 'bg-purple-50' },
   ];
@@ -32,11 +32,11 @@ export default function DashboardPage() {
       <div className="flex justify-between items-end">
         <div>
           <h1 className="text-3xl font-bold text-slate-900">Dashboard Operativo</h1>
-          <p className="text-slate-500">Resumen de actividad logística en tiempo real.</p>
+          <p className="text-slate-500">Resumen de actividad logÃ­stica en tiempo real.</p>
         </div>
         <div className="flex items-center gap-2 px-4 py-2 bg-white border rounded-xl text-sm font-medium text-slate-600 shadow-sm cursor-pointer hover:bg-slate-50">
           <Calendar className="w-4 h-4" />
-          Últimos 7 días
+          Ãšltimos 7 dÃ­as
         </div>
       </div>
 
@@ -88,3 +88,4 @@ export default function DashboardPage() {
     </div>
   );
 }
+

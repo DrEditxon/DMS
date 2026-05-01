@@ -3,16 +3,16 @@
 import React, { useEffect, useState } from 'react';
 
 interface CustomField {
-  id: str;
-  name: str;
-  label: str;
+  id: string;
+  name: string;
+  label: string;
   data_type: 'text' | 'number' | 'date' | 'select';
-  options?: str[];
+  options?: string[];
 }
 
-export default function DynamicForm({ deliveryId }: { deliveryId: str }) {
+export default function DynamicForm({ deliveryId }: { deliveryId: string }) {
   const [fields, setFields] = useState<CustomField[]>([]);
-  const [values, setValues] = useState<Record<str, any>>({});
+  const [values, setValues] = useState<Record<string, any>>({});
 
   useEffect(() => {
     // 1. Cargar definiciones de campos
@@ -34,7 +34,7 @@ export default function DynamicForm({ deliveryId }: { deliveryId: str }) {
     });
   }, [deliveryId]);
 
-  const handleChange = (fieldId: str, value: any) => {
+  const handleChange = (fieldId: string, value: any) => {
     setValues(prev => ({ ...prev, [fieldId]: value }));
   };
 
@@ -57,7 +57,7 @@ export default function DynamicForm({ deliveryId }: { deliveryId: str }) {
 
   return (
     <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col gap-6">
-      <h3 className="text-lg font-bold text-slate-800">Información Adicional</h3>
+      <h3 className="text-lg font-bold text-slate-800">InformaciÃ³n Adicional</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {fields.map(field => (
           <div key={field.id} className="flex flex-col gap-1">
@@ -93,3 +93,4 @@ export default function DynamicForm({ deliveryId }: { deliveryId: str }) {
     </div>
   );
 }
+

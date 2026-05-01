@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
@@ -70,3 +70,4 @@ export default function MapView({ items, center = [40.4168, -3.7038], zoom = 13 
     </div>
   );
 }
+

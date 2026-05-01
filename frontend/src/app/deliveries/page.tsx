@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useQuery } from '@tanstack/react-query';
 import api from '@/lib/api';
@@ -28,7 +28,7 @@ export default function DeliveriesPage() {
       <div className="flex justify-between items-center">
         <div>
           <h1 className="text-3xl font-bold text-slate-900">Entregas</h1>
-          <p className="text-slate-500">Gestiona y monitorea todos tus envíos activos.</p>
+          <p className="text-slate-500">Gestiona y monitorea todos tus envÃ­os activos.</p>
         </div>
         <Link 
           href="/deliveries/new"
@@ -44,7 +44,7 @@ export default function DeliveriesPage() {
             <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
             <input 
               type="text" 
-              placeholder="Buscar por cliente o dirección..."
+              placeholder="Buscar por cliente o direcciÃ³n..."
               className="w-full pl-10 pr-4 py-2 border rounded-lg bg-white focus:ring-2 focus:ring-blue-500 outline-none transition-all text-sm"
             />
           </div>
@@ -60,7 +60,7 @@ export default function DeliveriesPage() {
               <tr className="bg-slate-50/50 text-slate-500 text-xs uppercase tracking-wider font-semibold">
                 <th className="px-6 py-4">Referencia</th>
                 <th className="px-6 py-4">Cliente</th>
-                <th className="px-6 py-4">Dirección</th>
+                <th className="px-6 py-4">DirecciÃ³n</th>
                 <th className="px-6 py-4">Estado</th>
                 <th className="px-6 py-4">Fecha</th>
                 <th className="px-6 py-4 text-right">Acciones</th>
@@ -109,3 +109,4 @@ export default function DeliveriesPage() {
     </div>
   );
 }
+

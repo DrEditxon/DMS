@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { createContext, useContext, useEffect } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
@@ -21,7 +21,7 @@ export default function NotificationProvider({ children }: { children: React.Rea
             color: '#fff',
             borderRadius: '12px',
           },
-          icon: '🚚',
+          icon: 'ðŸšš',
         });
       }
     };
@@ -39,3 +39,4 @@ export default function NotificationProvider({ children }: { children: React.Rea
     </NotificationContext.Provider>
   );
 }
+

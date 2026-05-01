@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { 
   AreaChart, 
@@ -57,3 +57,4 @@ export default function StatsChart({ data }: { data: any[] }) {
     </div>
   );
 }
+

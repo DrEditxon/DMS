@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import api from '@/lib/api';
@@ -18,12 +18,12 @@ export default function UsersPage() {
   });
 
   const updateRole = useMutation({
-    mutationFn: ({ id, role }: { id: str, role: str }) => 
+    mutationFn: ({ id, role }: { id: string, role: string }) => 
       api.patch(`/users/${id}`, { role }),
     onSuccess: () => queryClient.invalidateQueries({ queryKey: ['users'] })
   });
 
-  const getRoleBadge = (role: str) => {
+  const getRoleBadge = (role: string) => {
     switch (role) {
       case 'admin': return <span className="flex items-center gap-1.5 text-purple-700 bg-purple-100 px-2.5 py-1 rounded-full text-xs font-bold uppercase"><ShieldCheck className="w-3 h-3" /> Admin</span>;
       case 'operator': return <span className="flex items-center gap-1.5 text-blue-700 bg-blue-100 px-2.5 py-1 rounded-full text-xs font-bold uppercase"><Shield className="w-3 h-3" /> Operador</span>;
@@ -39,8 +39,8 @@ export default function UsersPage() {
         <main className="p-8 space-y-6">
           <div className="flex justify-between items-center">
             <div>
-              <h1 className="text-3xl font-bold text-slate-900">Gestión de Usuarios</h1>
-              <p className="text-slate-500">Administra roles y permisos del personal de logística.</p>
+              <h1 className="text-3xl font-bold text-slate-900">GestiÃ³n de Usuarios</h1>
+              <p className="text-slate-500">Administra roles y permisos del personal de logÃ­stica.</p>
             </div>
             <button className="px-6 py-2.5 bg-slate-900 text-white rounded-xl font-bold hover:bg-slate-800 transition-all shadow-lg">
               + Invitar Usuario
@@ -113,3 +113,4 @@ export default function UsersPage() {
     </div>
   );
 }
+

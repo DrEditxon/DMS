@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
@@ -24,7 +24,7 @@ export default function NotificationCenter() {
   });
 
   const markAsRead = useMutation({
-    mutationFn: (id: str) => api.patch(`/notifications/${id}/read`),
+    mutationFn: (id: string) => api.patch(`/notifications/${id}/read`),
     onSuccess: () => queryClient.invalidateQueries({ queryKey: ['notifications'] })
   });
 
@@ -81,7 +81,7 @@ export default function NotificationCenter() {
                           <button 
                             onClick={() => markAsRead.mutate(n.id)}
                             className="p-1 hover:bg-emerald-100 text-emerald-600 rounded-md transition-all"
-                            title="Marcar como leída"
+                            title="Marcar como leÃ­da"
                           >
                             <Check className="w-3.5 h-3.5" />
                           </button>
@@ -108,3 +108,4 @@ export default function NotificationCenter() {
     </div>
   );
 }
+

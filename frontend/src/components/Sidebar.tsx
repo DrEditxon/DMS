@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from 'react';
 import Link from 'next/link';
@@ -22,7 +22,7 @@ function cn(...inputs: ClassValue[]) {
 const menuItems = [
   { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
   { name: 'Entregas', href: '/deliveries', icon: Truck },
-  { name: 'Mapa', href: '/map', icon: MapIcon }, // Asegúrate de importar MapIcon de lucide-react
+  { name: 'Mapa', href: '/map', icon: MapIcon }, // AsegÃºrate de importar MapIcon de lucide-react
   { name: 'Nueva Entrega', href: '/deliveries/new', icon: PackagePlus },
   { name: 'Usuarios', href: '/users', icon: Users },
 ];
@@ -75,9 +75,10 @@ export default function Sidebar() {
           className="flex items-center gap-3 px-4 py-3 w-full rounded-xl hover:bg-red-500/10 hover:text-red-400 transition-all text-slate-500"
         >
           <LogOut className="w-5 h-5" />
-          Cerrar Sesión
+          Cerrar SesiÃ³n
         </button>
       </div>
     </aside>
   );
 }
+

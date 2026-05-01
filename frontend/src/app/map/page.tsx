@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import MapView from '@/components/Map';
 import { useQuery } from '@tanstack/react-query';
@@ -20,7 +20,7 @@ export default function GlobalMapPage() {
       <main className="flex-1 ml-64 p-8 flex flex-col gap-6">
         <div>
           <h1 className="text-3xl font-bold text-slate-900">Mapa de Operaciones</h1>
-          <p className="text-slate-500">Visualiza la ubicación de todas tus entregas en tiempo real.</p>
+          <p className="text-slate-500">Visualiza la ubicaciÃ³n de todas tus entregas en tiempo real.</p>
         </div>
 
         <div className="flex-1 min-h-[600px] bg-white p-2 rounded-3xl shadow-xl shadow-slate-200 border border-slate-100">
@@ -30,3 +30,4 @@ export default function GlobalMapPage() {
     </div>
   );
 }
+

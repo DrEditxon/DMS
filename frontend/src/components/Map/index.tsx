@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import dynamic from 'next/dynamic';
 
@@ -12,3 +12,4 @@ const MapView = dynamic(() => import('./MapView'), {
 });
 
 export default MapView;
+
